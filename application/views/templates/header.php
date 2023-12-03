@@ -64,8 +64,8 @@
 			      <li class="nav-item dropdown">
 				        <a class="dropdown-toggle" href="blog.html" role="button" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Lapangan</a>
 				       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-				          <a class="dropdown-item" href="<?= site_url().'LapanganSintetis'?>">Lapangan Sintetis</a>
-				          <a class="dropdown-item" href="<?= site_url().'LapanganMatras'?>">Lapangan Matras</a>
+				          <a class="dropdown-item" href="<?= site_url().'Lapangan/sintetis'?>">Lapangan Sintetis</a>
+				          <a class="dropdown-item" href="<?= site_url().'Lapangan/matras'?>">Lapangan Matras</a>
 				        </div>
                   </li>
 			      <li class="nav-item"><a href="<?= site_url().'CaraPenyewaan'?>">Cara Penyewaan</a></li>
