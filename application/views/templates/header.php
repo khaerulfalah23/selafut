@@ -50,7 +50,7 @@
 		<div class="container">
 			<nav class="navbar navbar-expand-lg navbar-light mu-navbar">
 				<!-- Text based logo -->
-				<a class="navbar-brand mu-logo" href="<?= site_url().'user'?>"><span>Selafut</span></a>
+				<a class="navbar-brand mu-logo" href="<?= site_url().'home'?>"><span>Selafut</span></a>
 			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			    <span class="fa fa-bars"></span>
 			  </button>
@@ -58,17 +58,17 @@
 			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 			    <ul class="navbar-nav mr-auto mu-navbar-nav">
 			      <li class="nav-item ">
-			        <a href="<?= site_url().'user'?>">Beranda</a>
+			        <a href="<?= site_url().'home'?>">Beranda</a>
 			      </li>
-			      <li class="nav-item"><a href="<?= site_url().'user/penyewaan'?>">Penyewaan</a></li>
+			      <li class="nav-item"><a href="<?= site_url().'Penyewaan'?>">Penyewaan</a></li>
 			      <li class="nav-item dropdown">
 				        <a class="dropdown-toggle" href="blog.html" role="button" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Lapangan</a>
 				       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-				          <a class="dropdown-item" href="<?= site_url().'user/lapangan_sintetis'?>">Lapangan Sintetis</a>
-				          <a class="dropdown-item" href="<?= site_url().'user/lapangan_matras'?>">Lapangan Matras</a>
+				          <a class="dropdown-item" href="<?= site_url().'LapanganSintetis'?>">Lapangan Sintetis</a>
+				          <a class="dropdown-item" href="<?= site_url().'LapanganMatras'?>">Lapangan Matras</a>
 				        </div>
                   </li>
-			      <li class="nav-item"><a href="<?= site_url().'user/cara_penyewaan'?>">Cara Penyewaan</a></li>
+			      <li class="nav-item"><a href="<?= site_url().'CaraPenyewaan'?>">Cara Penyewaan</a></li>
 			      <li class="nav-item dropdown">
                       <a class="dropdown-toggle" href="blog.html" role="button" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?= $usersesion['nama']; ?></a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
