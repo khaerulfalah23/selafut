@@ -11,4 +11,13 @@ class Lapangan extends CI_Controller {
 		$this->load->view('lapangan_sintetis');
 		$this->load->view('templates/footer');
 	}
+
+	public function matras()
+	{
+		$data['lapangan'] = $this->ModelLapangan->getDataLapangan('lapangan_matras')->result_array();
+		$data['usersesion'] = $this->ModelUser->cekData(['email' => $this->session->userdata('email')])->row_array();
+		$this->load->view('templates/header',$data);
+		$this->load->view('lapangan_matras');
+		$this->load->view('templates/footer');
+	}
 }
