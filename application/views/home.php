@@ -10,7 +10,7 @@
 							<div class="col-md-12">
 								<div class="mu-single-slide-content">
 									<h1>SELAMAT DATANG</h1>
-									<p>Selamat Datang di website Penyewaan Lapangan Futsal. Mudah Dan Cepat Proses Pemesanan.Silahkan Registrasi Sebelum Anda Melakukan Pemesanan Lapangan Futsal</p>
+									<p>Selamat datang di website penyewaan lapangan futsal. Mudah dan cepat proses pemesanan. Silahkan registrasi sebelum anda melakukan pemesanan lapangan futsal</p>
 									<a class="mu-primary-btn" href="<?php echo site_url().'/Home/pemesanan'?>">Pesan Sekarang Juga <span class="fa fa-long-arrow-right"></span></a>
 								</div>
 							</div>
@@ -29,7 +29,7 @@
 							<div class="col-md-12">
 								<div class="mu-single-slide-content">
 									<h1>PENYEWAAN LAPANGAN FUTSAL</h1>
-									<p>Selamat datang di Website Penyewaan futsal. Disini Kami Menyediakan Jasa Penyewaan Lapangan Futsal Secara Online dan juga website penyewaan lapangan futsal ini kami akan memberikan pelayanan yang terbaik.</p>
+									<p>Selamat datang di website penyewaan futsal. Disini kami menyediakan jasa penyewaan lapangan futsal secara online dan juga website penyewaan lapangan futsal ini kami akan memberikan pelayanan yang terbaik.</p>
 									<a class="mu-primary-btn" href="<?php echo site_url().'/Home/pemesanan'?>">Pesan Sekarang Juga <span class="fa fa-long-arrow-right"></span></a>
 								</div>
 							</div>
@@ -48,7 +48,7 @@
 							<div class="col-md-12">
 								<div class="mu-single-slide-content">
 									<h1>Mudah Dan Cepat</h1>
-									<p>Di Website Penyewaan Lapangan Futsal ini Kami Memberikan Kemudahan Untuk Para User yang Akan melakukan pemesanan, Selain itu Kami Juga Akan Dengan Cepat Memperoses Pemesanan.</p>
+									<p>Di website penyewaan lapangan futsal ini kami memberikan kemudahan untuk para pelanggan yang akan melakukan pemesanan, selain itu kami juga akan dengan cepat memproses pemesanan.</p>
 									<a class="mu-primary-btn" href="<?php echo site_url().'/Home/pemesanan'?>">Pesan Sekarang Juga <span class="fa fa-long-arrow-right"></span></a>
 								</div>
 							</div>
@@ -93,15 +93,15 @@
 										<ul>
 											<li>
 												<h3>Mudah</h3>
-												<p>website penyewaan lapangan futsal ini mudah untuk melakukan pemesanan karna disini kami telah menyediakan fitur-fitur yang akan membantu anda untuk melakukan pemesanan </p>
+												<p>Website penyewaan lapangan futsal ini dapat memudahkan pelanggan melakukan pemesanan. Tersedia fitur - fitur petunjuk yang akan membantu untuk melakukan pemesanan </p>
 											</li>
 											<li>
 												<h3>Cepat</h3>
-												<p>proses pemesanan lapangan futsal ini juga cepat mendapatkan respon dari kami sehingga anda tidak perlu menunggu lama untuk melakukan pemesanan lapangan futsal</p>
+												<p>Proses pemesanan yang cepat, sehingga tidak perlu menunggu lama untuk melakukan pemesanan, pelanggan puas kami pun senang </p>
 											</li>
 											<li>
 												<h3>Efisien</h3>
-												<p>Melakukan Pemesanan di website kami sangat efisien karna disini untuk anda bisa melakukan pemesanan secara online </p>
+												<p>Website penyewaan lapangan futsal yang sangat efisien, pelanggan dapat melakukan pemesanan secara online </p>
 											</li>
 										</ul>
 									</div>
@@ -114,19 +114,6 @@
 			</div>
 		</section>
 
-		<!-- Call to Action -->
-		<div id="mu-call-to-action">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="mu-call-to-action-area">
-							
-							
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 		
 		<!-- Start Portfolio -->
 		<section id="mu-portfolio">
@@ -139,7 +126,7 @@
 								<div class="col-md-12">
 									<div class="mu-title">
 										<h2>Lapangan Futsal</h2>
-										<p>Kami Mempunyai dua Jenis Lapangan Futsal lapangan Matras Dan Lapangan Sintetis yang siap untuk di gunakan</p>
+										<p>Kami memiliki dua jenis lapangan futsal terdapat Lapangan Sintetis dan Lapangan Matras yang siap untuk di gunakan</p>
 									</div>
 								</div>
 							</div>

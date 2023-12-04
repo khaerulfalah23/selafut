@@ -6,7 +6,7 @@
 					<div class="col-md-3">
 						<div class="mu-single-footer">
 							<h1>Selafut</h1>
-							<p>website sistim penyewaan lapangan futsal berbasis web</p>
+							<p>Website sistem penyewaan lapangan futsal berbasis web</p>
 							<div class="mu-social-media">
 								<a href="#"><i class="fa fa-facebook"></i></a>
 								<a class="mu-twitter" href="#"><i class="fa fa-twitter"></i></a>
@@ -39,7 +39,7 @@
 					</div>
 					<div class="col-md-3">
 						<div class="mu-single-footer">
-							<h3>Jam Oprasional</h3>
+							<h3>Jam Operasional</h3>
 							<ul class="mu-useful-links">
 								<li><a href="#">Senin - Sabtu : 09.00 - 22.00</a></li>
 								<li><a href="#">Minggu : 10.00 - 20.00</a></li>
@@ -54,14 +54,14 @@
 							  <li class="media">
 							    <span class="fa fa-home"></span>
 							    <div class="media-body">
-							    	<p>Jl.Menteng no 76</p>
+							    	<p>Jl. Menteng no 76</p>
 							    </div>
 							  </li>
 							  <li class="media">
 							    <span class="fa fa-phone"></span>
 							    <div class="media-body">
-							       <p>+ 62 089 7890 4567</p>
-							     	<p>+ 62 085 8894 3269</p>
+							       <p>+ 62 856 7890 4567</p>
+							     	<p>+ 62 812 8894 3269</p>
 							    </div>
 							  </li>
 							  <li class="media">
