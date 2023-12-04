@@ -66,7 +66,7 @@
 				       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 				          <a class="dropdown-item" href="<?= site_url().'LapanganSintetis'?>">Lapangan Sintetis</a>
 				          <a class="dropdown-item" href="<?= site_url().'LapanganMatras'?>">Lapangan Matras</a>
-				        </div>
+				       </div>
                   </li>
 			      <li class="nav-item"><a href="<?= site_url().'CaraPenyewaan'?>">Cara Penyewaan</a></li>
 			      <li class="nav-item dropdown">
