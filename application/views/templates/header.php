@@ -72,7 +72,7 @@
 			      <li class="nav-item dropdown">
                       <a class="dropdown-toggle" href="blog.html" role="button" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?= $usersesion['nama']; ?></a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <a class="dropdown-item" href="<?= site_url().'user/profile'?>">Profile</a>
+                          <a class="dropdown-item" href="<?= site_url().'profile'?>">Profile</a>
 				          <a class="dropdown-item" href="<?= site_url().'autentifikasi/logout'?>">Logout</a>
 				        </div>
                    </li>
