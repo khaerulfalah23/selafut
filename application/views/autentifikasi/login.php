@@ -18,8 +18,17 @@
                                 <?= form_error('email', '<small class="login__check-label">', '</small>'); ?>
                             </div>
     
+                            <!-- <div>
+                                <label for="input-pass" class="login__label">Password</label>
+                                <div class="login__box">
+                                    <input type="password" placeholder="Masukan Password" name="password" class="login__input" id="input-pass">
+                                    <?= form_error('password', '<small class="login__check-label">', '</small>'); ?>
+                                </div>
+                            </div> -->
+
                             <div>
                                 <label for="input-pass" class="login__label">Password</label>
+                                
                                 <div class="login__box">
                                     <input type="password" placeholder="Masukan Password" name="password" class="login__input" id="input-pass">
                                     <?= form_error('password', '<small class="login__check-label">', '</small>'); ?>

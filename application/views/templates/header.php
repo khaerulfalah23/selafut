@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Web Penyewaan Lapangan Futsal</title>
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/icon" href="<?= base_url().'assets/images/favicon.ico'?>"/>
+    <link rel="shortcut icon" type="image/icon" href="<?= base_url().'assets/images/logo.png'?>"/>
     <!-- Font Awesome -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
      <!-- Bootstrap CSS -->
@@ -30,11 +30,6 @@
 	<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,400i,500,500i,600,700" rel="stylesheet">
 	<!-- Google Fonts Open sans -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,800" rel="stylesheet">
-	<!-- tabel -->
-	 <link href="<?= base_url().'assets/vendor/datatables/dataTables.bootstrap4.css'?>" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="<?= base_url().'assets/vendor/datatable/datatables.css' ?>">
-    <script type="text/javascript" src="<?= base_url().'assets/vendor/datatable/jquery.datatables.js'; ?>"></script>
-  <script type="text/javascript" src="<?= base_url().'assets/vendor/datatable/datatables.js'; ?>"></script>
  
 	</head>
   <body>
@@ -72,7 +67,7 @@
 			      <li class="nav-item dropdown">
                       <a class="dropdown-toggle" href="blog.html" role="button" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?= $usersesion['nama']; ?></a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <a class="dropdown-item" href="<?= site_url().'user/profile'?>">Profile</a>
+                          <a class="dropdown-item" href="<?= site_url().'profile'?>">Profile</a>
 				          <a class="dropdown-item" href="<?= site_url().'autentifikasi/logout'?>">Logout</a>
 				        </div>
                    </li>

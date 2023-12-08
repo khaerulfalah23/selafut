@@ -106,8 +106,6 @@
     <script type="text/javascript" src="<?php echo base_url().'assets/js/jquery.filterizr.min.js'?>"></script>
     <!-- Gallery Lightbox -->
     <script type="text/javascript" src="<?php echo base_url().'assets/js/jquery.magnific-popup.min.js'?>"></script>
-    <!-- Counter js -->
-    <script type="text/javascript" src="<?php echo base_url().'assets/js/counter.js'?>"></script>
     <!-- Ajax contact form  -->
     <script type="text/javascript" src="<?php echo base_url().'assets/js/app.js'?>"></script>
     

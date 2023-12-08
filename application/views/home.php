@@ -11,7 +11,7 @@
 								<div class="mu-single-slide-content">
 									<h1>SELAMAT DATANG</h1>
 									<p>Selamat datang di website penyewaan lapangan futsal. Mudah dan cepat proses pemesanan. Silahkan registrasi sebelum anda melakukan pemesanan lapangan futsal</p>
-									<a class="mu-primary-btn" href="<?php echo site_url().'/Home/pemesanan'?>">Pesan Sekarang Juga <span class="fa fa-long-arrow-right"></span></a>
+									<a class="mu-primary-btn" href="<?php echo site_url('penyewaan') ?>">Pesan Sekarang Juga <span class="fa fa-long-arrow-right"></span></a>
 								</div>
 							</div>
 						</div>
@@ -30,7 +30,7 @@
 								<div class="mu-single-slide-content">
 									<h1>PENYEWAAN LAPANGAN FUTSAL</h1>
 									<p>Selamat datang di website penyewaan futsal. Disini kami menyediakan jasa penyewaan lapangan futsal secara online dan juga website penyewaan lapangan futsal ini kami akan memberikan pelayanan yang terbaik.</p>
-									<a class="mu-primary-btn" href="<?php echo site_url().'/Home/pemesanan'?>">Pesan Sekarang Juga <span class="fa fa-long-arrow-right"></span></a>
+									<a class="mu-primary-btn" href="<?php echo site_url('penyewaan') ?>">Pesan Sekarang Juga <span class="fa fa-long-arrow-right"></span></a>
 								</div>
 							</div>
 						</div>
@@ -49,7 +49,7 @@
 								<div class="mu-single-slide-content">
 									<h1>Mudah Dan Cepat</h1>
 									<p>Di website penyewaan lapangan futsal ini kami memberikan kemudahan untuk para pelanggan yang akan melakukan pemesanan, selain itu kami juga akan dengan cepat memproses pemesanan.</p>
-									<a class="mu-primary-btn" href="<?php echo site_url().'/Home/pemesanan'?>">Pesan Sekarang Juga <span class="fa fa-long-arrow-right"></span></a>
+									<a class="mu-primary-btn" href="<?php echo site_url('penyewaan') ?>">Pesan Sekarang Juga <span class="fa fa-long-arrow-right"></span></a>
 								</div>
 							</div>
 						</div>
