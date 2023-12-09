@@ -7,12 +7,8 @@ class Autentifikasi extends CI_Controller
     public function index()
     {
         if($this->session->userdata('email')){
-            if ($data['role_id'] == 1) {
-                redirect('admin');
-            }
             redirect('home');
         }
-
         $this->form_validation->set_rules('email', 'Alamat Email', 'required|trim|valid_email', [
             'required' => 'Email Harus diisi!!',
             'valid_email' => 'Email Tidak Benar!!'
@@ -22,7 +18,6 @@ class Autentifikasi extends CI_Controller
         ]);
         if ($this->form_validation->run() == false) {
             $data['judul'] = 'Login';
-            $data['user'] = '';
             $this->load->view('templates/auth_header', $data);
             $this->load->view('autentifikasi/login');
             $this->load->view('templates/auth_footer');
@@ -42,15 +37,8 @@ class Autentifikasi extends CI_Controller
         if ($user) {
             //cek password
             if (password_verify($password, $user['password'])) {
-                $data = [
-                    'email' => $user['email'],
-                    'role_id' => $user['role_id']
-                ];
-
+                $data = ['email' => $user['email']];
                 $this->session->set_userdata($data);
-                if ($data['role_id'] == 1) {
-                    redirect('admin/dashboard');
-                }
                 redirect('home');
             } else {
                 $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-message" role="alert">Password salah!!</div>');
@@ -64,13 +52,7 @@ class Autentifikasi extends CI_Controller
 
     public function registrasi()
     {
-        if($this->session->userdata('email')){
-            if ($data['role_id'] == 1) {
-                redirect('admin');
-            }
-            redirect('user');
-        }
-        
+        $data['judul'] = 'Login';
         $this->form_validation->set_rules('nama', 'Nama Lengkap', 'required', [
             'required' => 'Nama Belum diis!!'
         ]);
@@ -96,7 +78,6 @@ class Autentifikasi extends CI_Controller
                 'email' => htmlspecialchars($email),
                 'image' => 'default.jpg',
                 'password' => password_hash($this->input->post('password'), PASSWORD_DEFAULT),
-                'role_id' => 2,
                 'date_created' => time()
             ];
 
@@ -110,7 +91,6 @@ class Autentifikasi extends CI_Controller
     public function logout()
     {
         $this->session->unset_userdata('email');
-        $this->session->unset_userdata('role_id');
         $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-message" role="alert">Anda berhasil logout!</div>');
         redirect('autentifikasi');
     }

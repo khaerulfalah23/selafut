@@ -13,6 +13,6 @@
         <!--=============== CSS ===============-->
         <link rel="stylesheet" href="<?= base_url('assets/auth/'); ?>css/style.css">
 
-        <title><?= $judul; ?></title>
+        <title>Selafut | <?= $judul; ?></title>
     </head>
     <body>
