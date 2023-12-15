@@ -13,13 +13,13 @@
                         <div class="login__inputs">
                             <div>
                                 <label for="nama" class="login__label">Nama</label>
-                                <input type="text" placeholder="Masukan Nama" id="nama" name="nama" class="login__input" value="<?= set_value('nama'); ?>">
+                                <input type="text" placeholder="Masukan Nama" id="nama" name="nama" class="login__input" value="<?= set_value('nama'); ?>" autocomplete="off" autofocus>
                                 <?= form_error('nama', '<small class="login__check-label">', '</small>'); ?>
                             </div>
                             
                             <div>
                                 <label for="email" class="login__label">Email</label>
-                                <input type="text" placeholder="Masukan Email" id="email" name="email" class="login__input" value="<?= set_value('email'); ?>">
+                                <input type="text" placeholder="Masukan Email" id="email" name="email" class="login__input" value="<?= set_value('email'); ?>" autocomplete="off">
                                 <?= form_error('email', '<small class="login__check-label">', '</small>'); ?>
                             </div>
     

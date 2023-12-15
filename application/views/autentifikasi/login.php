@@ -14,7 +14,7 @@
                         <div class="login__inputs">
                             <div>
                                 <label for="email" class="login__label">Email</label>
-                                <input type="text" placeholder="Masukan Email" id="email" name="email" class="login__input" value="<?= set_value('email'); ?>">
+                                <input type="text" placeholder="Masukan Email" id="email" name="email" class="login__input" value="<?= set_value('email'); ?>" autocomplete="off" autofocus>
                                 <?= form_error('email', '<small class="login__check-label">', '</small>'); ?>
                             </div>
 
@@ -22,7 +22,7 @@
                                 <label for="input-pass" class="login__label">Password</label>
                                 
                                 <div class="login__box">
-                                    <input type="password" placeholder="Masukan Password" name="password" class="login__input" id="input-pass">
+                                    <input type="password" placeholder="Masukan Password" name="password" class="login__input" id="input-pass" autocomplete="off">
                                     <?= form_error('password', '<small class="login__check-label">', '</small>'); ?>
                                     <i class="ri-eye-off-line login__eye" id="input-icon"></i>
                                 </div>

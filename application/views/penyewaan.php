@@ -23,7 +23,6 @@
 										<form action="<?= base_url('penyewaan'); ?>" method="post">
 									  <div class="form-group">
 									    <label >Nama</label>
-									    <input type="hidden" name="kode">
 									    <input type="text" class="form-control" name="nama" autocomplete="off">
 									  </div>
 									  <div class="form-group">

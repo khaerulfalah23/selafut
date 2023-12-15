@@ -10,7 +10,6 @@ class Penyewaan extends CI_Controller {
 
 	public function index()
 	{
-
 		$data['usersesion'] = $this->ModelUser->cekData(['email' => $this->session->userdata('email')])->row_array();
 
 		$this->form_validation->set_rules('nama', 'Nama Lengkap', 'required', [
@@ -26,17 +25,16 @@ class Penyewaan extends CI_Controller {
 			$this->load->view('penyewaan');
 			$this->load->view('templates/footer');
 		} else {
-			$kode=$this->input->post('kode');
-			$nama=$this->input->post('nama');
-			$email=$this->input->post('email');
-			$lapangan=$this->input->post('j_lapangan');
-			$jam_main=$this->input->post('jam_main');
-			$selesai=$this->input->post('selesai');
-			$tanggal=$this->input->post('tgl');
-			$lama_main=$selesai-$jam_main;
-			$harga_sewa=$lama_main*30000;
-      $kode_sewa = time();
-
+			$nama = htmlspecialchars($this->input->post('nama', true));
+			$email = htmlspecialchars($this->input->post('email', true));
+			$tanggal = htmlspecialchars($this->input->post('tgl', true));
+			$selesai = htmlspecialchars($this->input->post('selesai', true));
+			$jam_main = htmlspecialchars($this->input->post('jam_main', true));
+			$lapangan = htmlspecialchars($this->input->post('j_lapangan', true));
+			$lama_main = $selesai - $jam_main;
+			$harga_sewa = $lama_main*30000;
+			$kode_sewa = time();
+			
 			$data_transaksi=[
 				'nama_pemesan' => $nama,
 				'lapangan' => $lapangan,
@@ -50,51 +48,69 @@ class Penyewaan extends CI_Controller {
 				'kode_sewa' => $kode_sewa
 			];
 
-			$where=[
+			$data = [
+				'kode_sewa' => $kode_sewa,
+				'nama_pemesan' => $nama,
+				'email' => $email,
 				'tanggal' => $tanggal,
 				'jam_main' => $jam_main,
-				'selesai' => $selesai
+				'selesai' => $selesai,
+				'lama_main' => $lama_main,
+				'status' => "Proses"
 			];
 
-			if ($this->ModelFutsal->validasi($where,'transaksi')->num_rows() > 0) {
-				$this->session->set_flashdata('alert',' Maaf Sudah ada yang Booking Silahkan lihat jadwal terlebih dahulu sebelum memesan');
-				redirect('penyewaan');
-			} else {
-				$this->ModelFutsal->insert_data($data_transaksi,'transaksi');
+			$whereTanggal = ['tanggal' => $tanggal];
+			$whereJamMain = ['jam_main' => $jam_main];
+			$whereJamSelasai = ['selesai' => $selesai];
+			$validasiTanggal = $this->ModelFutsal->validasiJamMain($whereTanggal,'transaksi')->num_rows();
 
-				$where=['email' => $email];
-				$data['bukti']=$this->ModelFutsal->edit_data($where,'transaksi')->result_array();
-				$this->load->view('bukti_pemesanan',$data);
-
-				if ($lapangan == "Matras") {
-
-					$data_lapangan=[
-						'nama_pemesan' => $nama,
-						'email' => $email,
-						'tanggal' => $tanggal,
-						'jam_main' => $jam_main,
-						'selesai' => $selesai,
-						'lama_main' => $lama_main,
-						'status' => "Proses",
-            'kode_sewa' => $kode_sewa
-					];
-
-					$this->ModelFutsal->insert_data_lapangan($data_lapangan,'lapangan_matras');
-				} else if ($lapangan == "Sintetis") {
-
-					$data_lapangan=[
-						'nama_pemesan' => $nama,
-						'email' => $email,
-						'tanggal' => $tanggal,
-						'jam_main' => $jam_main,
-						'selesai' => $selesai,
-						'lama_main' => $lama_main,
-						'status' => "Proses",
-            'kode_sewa' => $kode_sewa
-					];
-
-					$this->ModelFutsal->insert_data_lapangan($data_lapangan,'lapangan_sintetis');
+			if ($data['lama_main'] > 0) {
+				if ($validasiTanggal > 0) {
+					if ($lapangan == "Matras") {
+						$validasiJamMain = $this->ModelFutsal->validasiJamMain($whereJamMain,'lapangan_matras')->num_rows();
+						$validasiJamSelesai = $this->ModelFutsal->validasiJamSelesai($whereJamSelasai,'lapangan_matras')->num_rows();
+						if ($validasiJamMain || $validasiJamSelesai > 0) {
+								$this->session->set_flashdata('alert',' Maaf Sudah ada yang Booking Silahkan lihat jadwal terlebih dahulu sebelum memesan');
+								redirect('penyewaan');
+						} else {
+								$this->ModelFutsal->insert_transaksi($data_transaksi,'transaksi');
+								$this->ModelFutsal->insert_data($data,'lapangan_matras');
+								$where=['email' => $email];
+								$data['bukti']=$this->ModelFutsal->edit_data($where,'transaksi')->result_array();
+								$this->load->view('bukti_pemesanan',$data);
+						}
+					} elseif ($lapangan == "Sintetis") {
+						$validasiJamMain = $this->ModelFutsal->validasiJamMain($whereJamMain,'lapangan_sintetis')->num_rows();
+						$validasiJamSelesai = $this->ModelFutsal->validasiJamSelesai($whereJamSelasai,'lapangan_sintetis')->num_rows();
+						if ($validasiJamMain || $validasiJamSelesai > 0) {
+								$this->session->set_flashdata('alert',' Maaf Sudah ada yang Booking Silahkan lihat jadwal terlebih dahulu sebelum memesan');
+								redirect('penyewaan');
+						} else {
+								$this->ModelFutsal->insert_transaksi($data_transaksi,'transaksi');
+								$this->ModelFutsal->insert_data($data,'lapangan_sintetis');
+								$where=['email' => $email];
+								$data['bukti']=$this->ModelFutsal->edit_data($where,'transaksi')->result_array();
+								$this->load->view('bukti_pemesanan',$data);
+						}
+					}
+				} else {
+					if ($lapangan == "Matras") {
+							$this->ModelFutsal->insert_transaksi($data_transaksi,'transaksi');
+							$this->ModelFutsal->insert_data($data,'lapangan_matras');
+							$where=['email' => $email];
+							$data['bukti']=$this->ModelFutsal->edit_data($where,'transaksi')->result_array();
+							$this->load->view('bukti_pemesanan',$data);
+					} elseif ($lapangan == "Sintetis") {
+							$this->ModelFutsal->insert_transaksi($data_transaksi,'transaksi');
+							$this->ModelFutsal->insert_data($data,'lapangan_sintetis');
+							$where=['email' => $email];
+							$data['bukti']=$this->ModelFutsal->edit_data($where,'transaksi')->result_array();
+							$this->load->view('bukti_pemesanan',$data);
+					}
 				}
+			} else {
+					$this->session->set_flashdata('alert','Waktu yang anda masukan salah!');
+					redirect('penyewaan');
 			}
 		}
 	}
