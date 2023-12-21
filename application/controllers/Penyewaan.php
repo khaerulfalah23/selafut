@@ -76,8 +76,11 @@ class Penyewaan extends CI_Controller {
 								$this->ModelFutsal->insert_transaksi($data_transaksi,'transaksi');
 								$this->ModelFutsal->insert_data($data,'lapangan_matras');
 								$where=['email' => $email];
+								$data['usersesion'] = $this->ModelUser->cekData(['email' => $this->session->userdata('email')])->row_array();
 								$data['bukti']=$this->ModelFutsal->edit_data($where,'transaksi')->result_array();
-								$this->load->view('bukti_pemesanan',$data);
+								$this->load->view('templates/header',$data);
+								$this->load->view('pembayaran');
+								$this->load->view('templates/footer');
 						}
 					} elseif ($lapangan == "Sintetis") {
 						$validasiJamMain = $this->ModelFutsal->validasiJamMain($whereJamMain,'lapangan_sintetis')->num_rows();
@@ -89,8 +92,11 @@ class Penyewaan extends CI_Controller {
 								$this->ModelFutsal->insert_transaksi($data_transaksi,'transaksi');
 								$this->ModelFutsal->insert_data($data,'lapangan_sintetis');
 								$where=['email' => $email];
+								$data['usersesion'] = $this->ModelUser->cekData(['email' => $this->session->userdata('email')])->row_array();
 								$data['bukti']=$this->ModelFutsal->edit_data($where,'transaksi')->result_array();
-								$this->load->view('bukti_pemesanan',$data);
+								$this->load->view('templates/header',$data);
+								$this->load->view('pembayaran');
+								$this->load->view('templates/footer');
 						}
 					}
 				} else {
@@ -98,14 +104,20 @@ class Penyewaan extends CI_Controller {
 							$this->ModelFutsal->insert_transaksi($data_transaksi,'transaksi');
 							$this->ModelFutsal->insert_data($data,'lapangan_matras');
 							$where=['email' => $email];
+							$data['usersesion'] = $this->ModelUser->cekData(['email' => $this->session->userdata('email')])->row_array();
 							$data['bukti']=$this->ModelFutsal->edit_data($where,'transaksi')->result_array();
-							$this->load->view('bukti_pemesanan',$data);
+							$this->load->view('templates/header',$data);
+							$this->load->view('pembayaran');
+							$this->load->view('templates/footer');
 					} elseif ($lapangan == "Sintetis") {
 							$this->ModelFutsal->insert_transaksi($data_transaksi,'transaksi');
 							$this->ModelFutsal->insert_data($data,'lapangan_sintetis');
 							$where=['email' => $email];
+							$data['usersesion'] = $this->ModelUser->cekData(['email' => $this->session->userdata('email')])->row_array();
 							$data['bukti']=$this->ModelFutsal->edit_data($where,'transaksi')->result_array();
-							$this->load->view('bukti_pemesanan',$data);
+							$this->load->view('templates/header',$data);
+							$this->load->view('pembayaran');
+							$this->load->view('templates/footer');
 					}
 				}
 			} else {
